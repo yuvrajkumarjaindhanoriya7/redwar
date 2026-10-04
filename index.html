@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>YJD TerraForge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+<canvas id="game"></canvas>
+<div id="hud">
+  <div id="topbar"><b>YJD TerraForge</b><span id="mode"></span><span id="coords"></span></div>
+  <div id="bars"><div class="bar hp"><span id="hp"></span></div><div class="bar mana"><span id="mana"></span></div></div>
+  <div id="hotbar"></div>
+  <div id="message"></div>
+</div>
+<div id="menu" class="panel">
+  <h1>YJD TerraForge</h1>
+  <p>Original 2D sandbox adventure • mining • crafting • NPCs • bosses</p>
+  <button id="survival">▶ Survival</button>
+  <button id="creative">🛠 Creative</button>
+  <button id="load">Load World</button>
+  <p class="small">A/D move • W/Space jump • Mouse mine/place • E inventory • C crafting • Esc pause</p>
+</div>
+<div id="inventory" class="panel hidden"></div>
+<div id="crafting" class="panel hidden"></div>
+<div id="pause" class="panel hidden"><h2>Paused</h2><button id="resume">Resume</button><button id="save">Save World</button></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
