@@ -1,0 +1,2 @@
+import {RECIPES,ITEMS} from "./data.js";
+export function renderCrafting(el,inv,onCraft){el.innerHTML="<h2>Crafting</h2><div id='recipes'></div>";let r=el.querySelector("#recipes");for(const q of RECIPES){let b=document.createElement("div");b.className="recipe";b.textContent=`${ITEMS[q.out].icon} ${ITEMS[q.out].name} ×${q.n} — `+Object.entries(q.needs).map(([id,n])=>`${ITEMS[id].icon}${n}`).join(" ");b.onclick=()=>{if(inv.takeNeeds(q.needs)){inv.add(q.out,q.n);onCraft()}};r.appendChild(b)}}
